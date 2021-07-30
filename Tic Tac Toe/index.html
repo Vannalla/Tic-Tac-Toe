@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="english">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container"></div>
+    <script src="app.js"></script>
+</body>
+<div class="container">
+    <h1>Tic-Tac-Toe</h1>
+    <br>
+    <div class="difficulty">
+        <button id="easy" onclick="clickEasy(this);">Easy</button>
+        <button id="medium" onclick="clickMedium(this);">Medium</button>
+        <button id="hard" onclick="clickHard(this);">Hard</button>
+    </div>
+    <br>
+    <div class="play-area">
+        <div id="block_0" class="block"></div>
+        <div id="block_1" class="block"></div>
+        <div id="block_2" class="block"></div>
+        <div id="block_3" class="block"></div>
+        <div id="block_4" class="block"></div>
+        <div id="block_5" class="block"></div>
+        <div id="block_6" class="block"></div>
+        <div id="block_7" class="block"></div>
+        <div id="block_8" class="block"></div>
+    </div>
+    <div class="container-button">
+        <br>
+        <!-- code for saying who wins -->
+        <h2 id="winner"></h2>
+        <br>
+        <button onclick="reset_board()">RESET BOARD</button>
+    </div>
+</div>
+<!--code for the script that allows the board to be clickable-->
+<script>
+    render_board(); // renders the board as a play area so the clicks put moves
+    game_loop(); // starts the game waiting for the human player to make a move
+</script>
+
+</html>
